@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CMS Sederhana</title>
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="asset/css/cms.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+        <h2> CMS Anggun</h2>
+
+        <ul>
+
+            <li onclick="tampilHalaman(event,'dashboard')" class="active">
+                📊 Dashboard
+            </li>
+
+            <li onclick="tampilHalaman(event,'artikel')">
+                📝 Artikel
+            </li>
+
+            <li onclick="tampilHalaman(event,'tentang')">
+                👩 Tentang
+            </li>
+
+            <!-- TAMBAHAN -->
+            <li onclick="bukaProfil()">
+                🌸 Masuk ke Website Profil
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+
+        <!-- DASHBOARD -->
+        <div id="dashboard" class="halaman aktif">
+
+            <h1>Dashboard CMS 💕</h1>
+
+            <div class="card">
+
+                <h3>Input Artikel</h3>
+
+                <form id="formArtikel">
+
+                    <label>Judul Artikel</label>
+
+                    <input 
+                        type="text" 
+                        id="judul" 
+                        placeholder="Masukkan judul artikel"
+                    >
+
+                    <label>Konten Artikel</label>
+
+                    <textarea 
+                        id="konten" 
+                        placeholder="Masukkan konten artikel"
+                    ></textarea>
+
+                    <button type="submit" class="btn-simpan">
+                        Simpan Artikel
+                    </button>
+
+                </form>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Daftar Artikel</h3>
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Judul</th>
+                            <th>Konten</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="listArtikel"></tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <!-- ARTIKEL -->
+        <div id="artikel" class="halaman">
+
+            <h1>Artikel Saya 💖</h1>
+
+            <div id="tampilArtikel"></div>
+
+        </div>
+
+        <!-- TENTANG -->
+        <div id="tentang" class="halaman">
+
+            <h1>Tentang Website 🌸</h1>
+
+            <div class="card">
+
+                <p>
+                    Saya Anggun Agistina 👋 disini saya membuat CMS sederhana 
+                    untuk memenuhi tugas responsi mata kuliah web programming.
+                </p>
+
+                <br>
+
+                <p>
+                    Website ini menggunakan HTML, CSS, dan JavaScript dengan 
+                    penyimpanan data menggunakan localStorage.
+                </p>
+
+                <br>
+
+                <p>
+                    Website ini mengelola artikel dengan fitur CRUD 
+                    (Create, Read, Update, Delete).
+                </p>
+
+                <br>
+
+                <p>
+                    Pengguna dapat menambahkan artikel melalui dashboard, 
+                    kemudian artikel akan disimpan dan ditampilkan kembali 
+                    pada halaman artikel.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- JS -->
+ <script>
+    if(localStorage.getItem("login") !== "true"){
+        alert("Anda harus login terlebih dahulu!");
+        window.location.href = "cms.html";
+    }
+ </script>
+ 
+<script src="asset/js/cms.js"></script>
+
+</body>
+</html>

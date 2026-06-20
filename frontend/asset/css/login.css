@@ -1,0 +1,78 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* BODY */
+body{
+    font-family:'Poppins',sans-serif;
+    background:#fce7f3;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* LOGIN BOX */
+.login-container{
+    width:420px;
+    background:white;
+    padding:50px 40px;
+    border-radius:30px;
+    box-shadow:0 10px 30px rgba(236,72,153,0.2);
+}
+
+/* TITLE */
+.login-title{
+    text-align:center;
+    font-size:55px;
+    color:#ec4899;
+    margin-bottom:40px;
+    font-weight:700;
+}
+
+/* INPUT */
+.input-box{
+    margin-bottom:20px;
+}
+
+.input-box input{
+    width:100%;
+    padding:18px;
+    border-radius:18px;
+    border:1px solid #f9a8d4;
+    font-size:18px;
+    outline:none;
+}
+
+.input-box input:focus{
+    border:1px solid #ec4899;
+}
+
+/* BUTTON */
+.login-btn{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:18px;
+    background:#ec4899;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.login-btn:hover{
+    background:#db2777;
+    transform:scale(1.02);
+}
+
+/* INFO */
+.info{
+    text-align:center;
+    margin-top:15px;
+    color:#6b7280;
+    font-size:14px;
+}

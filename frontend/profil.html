@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="asset/css/style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+<title>Profil Anggun Agistina</title>
+</head>
+
+<body>
+
+<div class="header">
+    💖 Anggun Agistina 💖
+</div>
+
+<div class="tabs">
+    <button class="tab-btn active" onclick="showTab(event,'beranda')">🏠 Beranda</button>
+    <button class="tab-btn" onclick="showTab(event,'profil')">👤 Profil</button>
+    <button class="tab-btn" onclick="showTab(event,'about')">📖 About me</button>
+    <button class="tab-btn" onclick="showTab(event,'goals')">🎯 Top mygoals</button>
+    <button class="tab-btn" onclick="showTab(event,'favorite')">❤️ Favorite things</button>
+    <button class="tab-btn" onclick="showTab(event,'contact')">☎️ Contact</button>
+    <button class="tab-btn" onclick="showTab(event,'artikelcms')">📝 Artikel</button>
+    <button type="button" class="tab-btn" onclick="logout()">🚪 Logout</button>
+</div>
+
+<!-- BERANDA -->
+<div id="beranda" class="card active">
+    <div class="title">haiii Selamat Datang yaa.. 👋</div>
+
+    <div class="subtitle">
+        silahkan Jelajahi profil dan cerita saya di tab navigasi di atas
+        dan semoga kamu suka ya ❤️
+    </div>
+
+    <div class="list">
+        <p>sebelum itu isi terlebih duluu nama kamu yaaa..</p>
+
+        <form>
+            <input type="text" placeholder="Masukkan nama anda">
+            <input type="email" placeholder="Masukkan email">
+
+            <button type="button" onclick="goToProfil()">
+                Kirim
+            </button>
+        </form>
+    </div>
+</div>
+
+<!-- PROFIL -->
+<div id="profil" class="card">
+    <img 
+        src="image/WhatsApp Image 2026-03-31 at 20.23.43.jpeg"
+        class="profile-img"
+        alt="Foto Profil"
+    >
+
+    <div class="title">Profil Saya</div>
+
+    <p>Nama: Anggun Agistina</p>
+    <p>NIM: 24EO10011</p>
+    <p>Prodi: Informatika</p>
+    <p>Fakultas: Matematika dan ilmu komputer</p>
+
+    <h3>📍 Lokasi saya</h3>
+    <div id="map"></div>
+</div> <!-- INI YANG TADI KURANG -->
+
+<!-- ABOUT -->
+<div id="about" class="card">
+    <div class="title">About me</div>
+
+    <p>
+        Haiii, aku seseorang yang menikmati hal-hal sederhana dan menemukan
+        kebahagiaan dari hal kecil 🤍
+        Aku suka mencoba hal baru, aku juga tidak suka keramaian karena bagiku
+        itu sangat berisik.
+        Kadang aku menghabiskan waktu dengan mendengarkan musik 🎧 atau menikmati
+        waktu sendiri 🌸
+        Aku selalu percaya setiap proses itu penting.
+    </p>
+</div>
+
+<!-- GOALS -->
+<div id="goals" class="card">
+    <div class="title">Top myGoals</div>
+
+    <p>🎯 Menjadi lebih baik</p>
+    <p>🎯 Lebih ambisius</p>
+</div>
+
+<!-- FAVORITE -->
+<div id="favorite" class="card">
+    <div class="title">Favorite Things ❤️</div>
+
+    <p>🎬 Film</p>
+    <p>🎧 Musik</p>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="card">
+    <div class="contact-container">
+        <div class="title">Contact Me 💌</div>
+
+        <form class="contact-form">
+            <label>Nama</label>
+            <input type="text" placeholder="Masukkan nama kamu">
+
+            <label>Email</label>
+            <input type="email" placeholder="Masukkan email kamu">
+
+            <label>No HP</label>
+            <div class="phone-box">
+                <span>🇮🇩 +62</span>
+                <input type="text" placeholder="081234567890">
+            </div>
+
+            <label>Pesan</label>
+            <textarea placeholder="Tulis pesan kamu disini yaa 💖"></textarea>
+
+            <button type="submit" class="submit-btn">
+                Kirim Pesan 💕
+            </button>
+        </form>
+    </div>
+</div>
+
+<!-- ARTIKEL -->
+<div id="artikelcms" class="card">
+    <div class="title">Artikel Saya</div>
+    <div id="artikelProfil"></div>
+</div>
+
+<script src="asset/js/model.js"></script>
+<script src="asset/js/view.js"></script>
+<script src="asset/js/presenter.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="asset/js/profil.js"></script>
+
+</body>
+</html>

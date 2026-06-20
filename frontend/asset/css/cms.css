@@ -1,0 +1,182 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* BODY */
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(-45deg,#fda4af,#fbcfe8,#fce7f3,#f9a8d4);
+    background-size:400% 400%;
+    animation:gradientMove 10s ease infinite;
+    min-height:100vh;
+}
+
+/* ANIMASI */
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* WRAPPER */
+.wrapper{
+    display:flex;
+    min-height:100vh;
+}
+
+/* SIDEBAR */
+.sidebar{
+    width:250px;
+    background:rgba(255,255,255,0.2);
+    backdrop-filter:blur(10px);
+    padding:30px 20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+.sidebar h2{
+    color:#ec4899;
+    margin-bottom:30px;
+    text-align:center;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    padding:15px;
+    margin-bottom:10px;
+    border-radius:15px;
+    cursor:pointer;
+    transition:0.3s;
+    font-weight:500;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.active{
+    background:#ec4899;
+    color:white;
+}
+
+/* MAIN */
+.main{
+    flex:1;
+    padding:40px;
+}
+
+/* HALAMAN */
+.halaman{
+    display:none;
+}
+
+.halaman.aktif{
+    display:block;
+}
+
+/* TITLE */
+h1{
+    color:#db2777;
+    margin-bottom:20px;
+}
+
+/* CARD */
+.card{
+    background:white;
+    padding:25px;
+    border-radius:25px;
+    margin-bottom:25px;
+    box-shadow:0 10px 30px rgba(236,72,153,0.15);
+}
+
+/* INPUT */
+input,
+textarea{
+    width:100%;
+    padding:14px;
+    margin-top:8px;
+    margin-bottom:18px;
+    border-radius:15px;
+    border:1px solid #f9a8d4;
+    outline:none;
+    font-family:'Poppins',sans-serif;
+}
+
+textarea{
+    min-height:120px;
+    resize:none;
+}
+
+/* BUTTON */
+button{
+    padding:12px 22px;
+    border:none;
+    border-radius:15px;
+    background:#ec4899;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+    font-weight:500;
+}
+
+button:hover{
+    background:#db2777;
+    transform:scale(1.03);
+}
+
+/* TABLE */
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#f9a8d4;
+    color:white;
+}
+
+th,td{
+    padding:14px;
+    border:1px solid #fbcfe8;
+    text-align:left;
+}
+
+/* BUTTON EDIT */
+.btn-edit{
+    background:#f59e0b;
+    margin-right:5px;
+}
+
+/* BUTTON HAPUS */
+.btn-hapus{
+    background:#ef4444;
+}
+
+/* ARTIKEL */
+#tampilArtikel .card h3{
+    color:#ec4899;
+    margin-bottom:10px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    .wrapper{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+    }
+
+    .main{
+        padding:20px;
+    }
+
+    table{
+        font-size:12px;
+    }
+
+}
